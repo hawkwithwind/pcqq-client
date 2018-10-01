@@ -18,3 +18,12 @@ PROJECT=QQLoginTest
 PROJECT_IMAGE=qqlogintest
 ```
 
+## How to add QQ num and pass into QQLoginTest
+
+modify QQLoginTest/Program.cs
+
+```
+var user = new QQUser(0, "");
+```
+
+
