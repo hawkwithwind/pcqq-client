@@ -3,6 +3,7 @@ restful API for pcqq-protocol
 
 ## How to build
 ```
+#/ git submodule init
 #/ make
 ```
 
