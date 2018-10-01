@@ -1,0 +1,3 @@
+[submodule "PCQQ-Protocol"]
+	path = PCQQ-Protocol
+	url = git@github.com:luojinfang/PCQQ-Protocol.git
