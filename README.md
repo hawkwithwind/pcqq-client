@@ -20,12 +20,17 @@ PROJECT=QQLoginTest
 PROJECT_IMAGE=qqlogintest
 ```
 
-## How to add QQ num and pass into QQLoginTest
+## How to sync to newest version PCQQ-Protocol
 
-modify QQLoginTest/Program.cs
+this project uses git submodule command, for more info see git-submodule(1) for details.
 
 ```
-var user = new QQUser(0, "");
+#/ git submodule update --recursive --remote
 ```
+note that newest PCQQ-Protocol MAY OR MAY NOT compile with current project.
+
+
+
+
 
 
