@@ -3,11 +3,11 @@ using QQ.Framework;
 using QQ.Framework.Domains;
 using QQ.Framework.Utils;
 
-namespace QQLoginTest.Robots
+namespace QQGRPCRobot.Robots
 {
-    public class TestRoBot : CustomRoBot
+    public class GRPCRobot : CustomRoBot
     {
-        public TestRoBot(ISendMessageService service, IServerMessageSubject transponder, QQUser user) : base(service, transponder, user)
+        public GRPCRobot(ISendMessageService service, IServerMessageSubject transponder, QQUser user) : base(service, transponder, user)
         {
         }
 
