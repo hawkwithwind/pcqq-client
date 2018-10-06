@@ -5,7 +5,7 @@ using QQ.Framework.Utils;
 
 namespace QQGRPCRobot.Robots
 {
-    public class GRPCRobot : CustomRoBot
+    public class GRPCRobot : CustomRobot
     {
         public GRPCRobot(ISendMessageService service, IServerMessageSubject transponder, QQUser user) : base(service, transponder, user)
         {
