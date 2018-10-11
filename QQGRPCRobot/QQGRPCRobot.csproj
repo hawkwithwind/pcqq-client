@@ -82,7 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="QQBotClient.cs" />
     <Compile Include="Robots\GRPCRobot.cs" />
+    <Compile Include="Robots\GRPCSocketServiceImpl.cs" />
+    <Compile Include="Robots\GRPCSendMessageServiceImpl.cs" />
     <Compile Include="Domains\RobotConfig.cs" />
     <Compile Include="Domains\GRPCServer.cs" />
     <Compile Include="Domains\QQLoginInfo.cs" />

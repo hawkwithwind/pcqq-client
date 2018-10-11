@@ -24,27 +24,40 @@ namespace Chatbothub {
     static ChatbothubReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBjaGF0Ym90aHViLnByb3RvEgpjaGF0Ym90aHViIj0KDEV2ZW50UmVxdWVz",
-            "dBIRCglldmVudFR5cGUYASABKAkSDAoEYm9keRgCIAEoCRIMCgR0eGlkGAMg",
-            "ASgJIjsKCkV2ZW50UmVwbHkSEQoJZXZlbnRUeXBlGAEgASgJEgwKBGJvZHkY",
-            "AiABKAkSDAoEdHhpZBgDIAEoCTJTCgpDaGF0Qm90SHViEkUKC0V2ZW50VHVu",
-            "bmVsEhguY2hhdGJvdGh1Yi5FdmVudFJlcXVlc3QaFi5jaGF0Ym90aHViLkV2",
-            "ZW50UmVwbHkiACgBMAFCMAobbmV0Lmhhd2t3aXRod2luZC5jaGF0Ym90aHVi",
-            "Qg9DaGF0Qm90SHViUHJvdG9QAWIGcHJvdG8z"));
+            "ChBjaGF0Ym90aHViLnByb3RvEgpjaGF0Ym90aHViIlUKDEV2ZW50UmVxdWVz",
+            "dBIRCglldmVudFR5cGUYASABKAkSDAoEYm9keRgCIAEoCRIQCghjbGllbnRJ",
+            "ZBgDIAEoCRISCgpjbGllbnRUeXBlGAQgASgJIlMKCkV2ZW50UmVwbHkSEQoJ",
+            "ZXZlbnRUeXBlGAEgASgJEgwKBGJvZHkYAiABKAkSEAoIY2xpZW50SWQYAyAB",
+            "KAkSEgoKY2xpZW50VHlwZRgEIAEoCSIdCgtCb3RzUmVxdWVzdBIOCgZzZWNy",
+            "ZXQYASABKAkiMwoJQm90c1JlcGx5EiYKCGJvdHNJbmZvGAEgAygLMhQuY2hh",
+            "dGJvdGh1Yi5Cb3RzSW5mbyKAAQoIQm90c0luZm8SEAoIY2xpZW50SWQYASAB",
+            "KAkSEgoKY2xpZW50VHlwZRgCIAEoCRIMCgRuYW1lGAMgASgJEg8KB3N0YXJ0",
+            "QXQYBCABKAMSEAoIbGFzdFBpbmcYBSABKAMSDQoFbG9naW4YBiABKAkSDgoG",
+            "c3RhdHVzGAcgASgFIkMKDkxvZ2luUVFSZXF1ZXN0EhAKCGNsaWVudElkGAEg",
+            "ASgJEg0KBVFRTnVtGAIgASgEEhAKCHBhc3N3b3JkGAMgASgJIhsKDExvZ2lu",
+            "UVFSZXBseRILCgNtc2cYASABKAky0wEKCkNoYXRCb3RIdWISRQoLRXZlbnRU",
+            "dW5uZWwSGC5jaGF0Ym90aHViLkV2ZW50UmVxdWVzdBoWLmNoYXRib3RodWIu",
+            "RXZlbnRSZXBseSIAKAEwARI7CgdHZXRCb3RzEhcuY2hhdGJvdGh1Yi5Cb3Rz",
+            "UmVxdWVzdBoVLmNoYXRib3RodWIuQm90c1JlcGx5IgASQQoHTG9naW5RURIa",
+            "LmNoYXRib3RodWIuTG9naW5RUVJlcXVlc3QaGC5jaGF0Ym90aHViLkxvZ2lu",
+            "UVFSZXBseSIAQjAKG25ldC5oYXdrd2l0aHdpbmQuY2hhdGJvdGh1YkIPQ2hh",
+            "dEJvdEh1YlByb3RvUAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.EventRequest), global::Chatbothub.EventRequest.Parser, new[]{ "EventType", "Body", "Txid" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.EventReply), global::Chatbothub.EventReply.Parser, new[]{ "EventType", "Body", "Txid" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.EventRequest), global::Chatbothub.EventRequest.Parser, new[]{ "EventType", "Body", "ClientId", "ClientType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.EventReply), global::Chatbothub.EventReply.Parser, new[]{ "EventType", "Body", "ClientId", "ClientType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.BotsRequest), global::Chatbothub.BotsRequest.Parser, new[]{ "Secret" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.BotsReply), global::Chatbothub.BotsReply.Parser, new[]{ "BotsInfo" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.BotsInfo), global::Chatbothub.BotsInfo.Parser, new[]{ "ClientId", "ClientType", "Name", "StartAt", "LastPing", "Login", "Status" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.LoginQQRequest), global::Chatbothub.LoginQQRequest.Parser, new[]{ "ClientId", "QQNum", "Password" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Chatbothub.LoginQQReply), global::Chatbothub.LoginQQReply.Parser, new[]{ "Msg" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  /// <summary>
-  /// The request message containing the user's name.
-  /// </summary>
   public sealed partial class EventRequest : pb::IMessage<EventRequest> {
     private static readonly pb::MessageParser<EventRequest> _parser = new pb::MessageParser<EventRequest>(() => new EventRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -72,7 +85,8 @@ namespace Chatbothub {
     public EventRequest(EventRequest other) : this() {
       eventType_ = other.eventType_;
       body_ = other.body_;
-      txid_ = other.txid_;
+      clientId_ = other.clientId_;
+      clientType_ = other.clientType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -103,14 +117,25 @@ namespace Chatbothub {
       }
     }
 
-    /// <summary>Field number for the "txid" field.</summary>
-    public const int TxidFieldNumber = 3;
-    private string txid_ = "";
+    /// <summary>Field number for the "clientId" field.</summary>
+    public const int ClientIdFieldNumber = 3;
+    private string clientId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Txid {
-      get { return txid_; }
+    public string ClientId {
+      get { return clientId_; }
       set {
-        txid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "clientType" field.</summary>
+    public const int ClientTypeFieldNumber = 4;
+    private string clientType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientType {
+      get { return clientType_; }
+      set {
+        clientType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -129,7 +154,8 @@ namespace Chatbothub {
       }
       if (EventType != other.EventType) return false;
       if (Body != other.Body) return false;
-      if (Txid != other.Txid) return false;
+      if (ClientId != other.ClientId) return false;
+      if (ClientType != other.ClientType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -138,7 +164,8 @@ namespace Chatbothub {
       int hash = 1;
       if (EventType.Length != 0) hash ^= EventType.GetHashCode();
       if (Body.Length != 0) hash ^= Body.GetHashCode();
-      if (Txid.Length != 0) hash ^= Txid.GetHashCode();
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (ClientType.Length != 0) hash ^= ClientType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -160,9 +187,13 @@ namespace Chatbothub {
         output.WriteRawTag(18);
         output.WriteString(Body);
       }
-      if (Txid.Length != 0) {
+      if (ClientId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Txid);
+        output.WriteString(ClientId);
+      }
+      if (ClientType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -178,8 +209,11 @@ namespace Chatbothub {
       if (Body.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Body);
       }
-      if (Txid.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Txid);
+      if (ClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (ClientType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -198,8 +232,11 @@ namespace Chatbothub {
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
-      if (other.Txid.Length != 0) {
-        Txid = other.Txid;
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.ClientType.Length != 0) {
+        ClientType = other.ClientType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -221,7 +258,11 @@ namespace Chatbothub {
             break;
           }
           case 26: {
-            Txid = input.ReadString();
+            ClientId = input.ReadString();
+            break;
+          }
+          case 34: {
+            ClientType = input.ReadString();
             break;
           }
         }
@@ -230,9 +271,6 @@ namespace Chatbothub {
 
   }
 
-  /// <summary>
-  /// The response message containing the greetings
-  /// </summary>
   public sealed partial class EventReply : pb::IMessage<EventReply> {
     private static readonly pb::MessageParser<EventReply> _parser = new pb::MessageParser<EventReply>(() => new EventReply());
     private pb::UnknownFieldSet _unknownFields;
@@ -260,7 +298,8 @@ namespace Chatbothub {
     public EventReply(EventReply other) : this() {
       eventType_ = other.eventType_;
       body_ = other.body_;
-      txid_ = other.txid_;
+      clientId_ = other.clientId_;
+      clientType_ = other.clientType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -291,14 +330,25 @@ namespace Chatbothub {
       }
     }
 
-    /// <summary>Field number for the "txid" field.</summary>
-    public const int TxidFieldNumber = 3;
-    private string txid_ = "";
+    /// <summary>Field number for the "clientId" field.</summary>
+    public const int ClientIdFieldNumber = 3;
+    private string clientId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Txid {
-      get { return txid_; }
+    public string ClientId {
+      get { return clientId_; }
       set {
-        txid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "clientType" field.</summary>
+    public const int ClientTypeFieldNumber = 4;
+    private string clientType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientType {
+      get { return clientType_; }
+      set {
+        clientType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -317,7 +367,8 @@ namespace Chatbothub {
       }
       if (EventType != other.EventType) return false;
       if (Body != other.Body) return false;
-      if (Txid != other.Txid) return false;
+      if (ClientId != other.ClientId) return false;
+      if (ClientType != other.ClientType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -326,7 +377,8 @@ namespace Chatbothub {
       int hash = 1;
       if (EventType.Length != 0) hash ^= EventType.GetHashCode();
       if (Body.Length != 0) hash ^= Body.GetHashCode();
-      if (Txid.Length != 0) hash ^= Txid.GetHashCode();
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (ClientType.Length != 0) hash ^= ClientType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -348,9 +400,13 @@ namespace Chatbothub {
         output.WriteRawTag(18);
         output.WriteString(Body);
       }
-      if (Txid.Length != 0) {
+      if (ClientId.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Txid);
+        output.WriteString(ClientId);
+      }
+      if (ClientType.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ClientType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -366,8 +422,11 @@ namespace Chatbothub {
       if (Body.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Body);
       }
-      if (Txid.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Txid);
+      if (ClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (ClientType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -386,8 +445,11 @@ namespace Chatbothub {
       if (other.Body.Length != 0) {
         Body = other.Body;
       }
-      if (other.Txid.Length != 0) {
-        Txid = other.Txid;
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.ClientType.Length != 0) {
+        ClientType = other.ClientType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -409,7 +471,872 @@ namespace Chatbothub {
             break;
           }
           case 26: {
-            Txid = input.ReadString();
+            ClientId = input.ReadString();
+            break;
+          }
+          case 34: {
+            ClientType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class BotsRequest : pb::IMessage<BotsRequest> {
+    private static readonly pb::MessageParser<BotsRequest> _parser = new pb::MessageParser<BotsRequest>(() => new BotsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BotsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Chatbothub.ChatbothubReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsRequest(BotsRequest other) : this() {
+      secret_ = other.secret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsRequest Clone() {
+      return new BotsRequest(this);
+    }
+
+    /// <summary>Field number for the "secret" field.</summary>
+    public const int SecretFieldNumber = 1;
+    private string secret_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Secret {
+      get { return secret_; }
+      set {
+        secret_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BotsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BotsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Secret != other.Secret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Secret.Length != 0) hash ^= Secret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Secret.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Secret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Secret.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Secret);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BotsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Secret.Length != 0) {
+        Secret = other.Secret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Secret = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class BotsReply : pb::IMessage<BotsReply> {
+    private static readonly pb::MessageParser<BotsReply> _parser = new pb::MessageParser<BotsReply>(() => new BotsReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BotsReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Chatbothub.ChatbothubReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsReply(BotsReply other) : this() {
+      botsInfo_ = other.botsInfo_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsReply Clone() {
+      return new BotsReply(this);
+    }
+
+    /// <summary>Field number for the "botsInfo" field.</summary>
+    public const int BotsInfoFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Chatbothub.BotsInfo> _repeated_botsInfo_codec
+        = pb::FieldCodec.ForMessage(10, global::Chatbothub.BotsInfo.Parser);
+    private readonly pbc::RepeatedField<global::Chatbothub.BotsInfo> botsInfo_ = new pbc::RepeatedField<global::Chatbothub.BotsInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Chatbothub.BotsInfo> BotsInfo {
+      get { return botsInfo_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BotsReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BotsReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!botsInfo_.Equals(other.botsInfo_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= botsInfo_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      botsInfo_.WriteTo(output, _repeated_botsInfo_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += botsInfo_.CalculateSize(_repeated_botsInfo_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BotsReply other) {
+      if (other == null) {
+        return;
+      }
+      botsInfo_.Add(other.botsInfo_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            botsInfo_.AddEntriesFrom(input, _repeated_botsInfo_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class BotsInfo : pb::IMessage<BotsInfo> {
+    private static readonly pb::MessageParser<BotsInfo> _parser = new pb::MessageParser<BotsInfo>(() => new BotsInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<BotsInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Chatbothub.ChatbothubReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsInfo(BotsInfo other) : this() {
+      clientId_ = other.clientId_;
+      clientType_ = other.clientType_;
+      name_ = other.name_;
+      startAt_ = other.startAt_;
+      lastPing_ = other.lastPing_;
+      login_ = other.login_;
+      status_ = other.status_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public BotsInfo Clone() {
+      return new BotsInfo(this);
+    }
+
+    /// <summary>Field number for the "clientId" field.</summary>
+    public const int ClientIdFieldNumber = 1;
+    private string clientId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientId {
+      get { return clientId_; }
+      set {
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "clientType" field.</summary>
+    public const int ClientTypeFieldNumber = 2;
+    private string clientType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientType {
+      get { return clientType_; }
+      set {
+        clientType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "startAt" field.</summary>
+    public const int StartAtFieldNumber = 4;
+    private long startAt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartAt {
+      get { return startAt_; }
+      set {
+        startAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "lastPing" field.</summary>
+    public const int LastPingFieldNumber = 5;
+    private long lastPing_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long LastPing {
+      get { return lastPing_; }
+      set {
+        lastPing_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "login" field.</summary>
+    public const int LoginFieldNumber = 6;
+    private string login_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Login {
+      get { return login_; }
+      set {
+        login_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 7;
+    private int status_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as BotsInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BotsInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ClientId != other.ClientId) return false;
+      if (ClientType != other.ClientType) return false;
+      if (Name != other.Name) return false;
+      if (StartAt != other.StartAt) return false;
+      if (LastPing != other.LastPing) return false;
+      if (Login != other.Login) return false;
+      if (Status != other.Status) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (ClientType.Length != 0) hash ^= ClientType.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (StartAt != 0L) hash ^= StartAt.GetHashCode();
+      if (LastPing != 0L) hash ^= LastPing.GetHashCode();
+      if (Login.Length != 0) hash ^= Login.GetHashCode();
+      if (Status != 0) hash ^= Status.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClientId);
+      }
+      if (ClientType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ClientType);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Name);
+      }
+      if (StartAt != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(StartAt);
+      }
+      if (LastPing != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(LastPing);
+      }
+      if (Login.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Login);
+      }
+      if (Status != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (ClientType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientType);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (StartAt != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartAt);
+      }
+      if (LastPing != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastPing);
+      }
+      if (Login.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Login);
+      }
+      if (Status != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Status);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(BotsInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.ClientType.Length != 0) {
+        ClientType = other.ClientType;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.StartAt != 0L) {
+        StartAt = other.StartAt;
+      }
+      if (other.LastPing != 0L) {
+        LastPing = other.LastPing;
+      }
+      if (other.Login.Length != 0) {
+        Login = other.Login;
+      }
+      if (other.Status != 0) {
+        Status = other.Status;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 18: {
+            ClientType = input.ReadString();
+            break;
+          }
+          case 26: {
+            Name = input.ReadString();
+            break;
+          }
+          case 32: {
+            StartAt = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            LastPing = input.ReadInt64();
+            break;
+          }
+          case 50: {
+            Login = input.ReadString();
+            break;
+          }
+          case 56: {
+            Status = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class LoginQQRequest : pb::IMessage<LoginQQRequest> {
+    private static readonly pb::MessageParser<LoginQQRequest> _parser = new pb::MessageParser<LoginQQRequest>(() => new LoginQQRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LoginQQRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Chatbothub.ChatbothubReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginQQRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginQQRequest(LoginQQRequest other) : this() {
+      clientId_ = other.clientId_;
+      qQNum_ = other.qQNum_;
+      password_ = other.password_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginQQRequest Clone() {
+      return new LoginQQRequest(this);
+    }
+
+    /// <summary>Field number for the "clientId" field.</summary>
+    public const int ClientIdFieldNumber = 1;
+    private string clientId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ClientId {
+      get { return clientId_; }
+      set {
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "QQNum" field.</summary>
+    public const int QQNumFieldNumber = 2;
+    private ulong qQNum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ulong QQNum {
+      get { return qQNum_; }
+      set {
+        qQNum_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "password" field.</summary>
+    public const int PasswordFieldNumber = 3;
+    private string password_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Password {
+      get { return password_; }
+      set {
+        password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LoginQQRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LoginQQRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ClientId != other.ClientId) return false;
+      if (QQNum != other.QQNum) return false;
+      if (Password != other.Password) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ClientId.Length != 0) hash ^= ClientId.GetHashCode();
+      if (QQNum != 0UL) hash ^= QQNum.GetHashCode();
+      if (Password.Length != 0) hash ^= Password.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ClientId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ClientId);
+      }
+      if (QQNum != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(QQNum);
+      }
+      if (Password.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Password);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ClientId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
+      }
+      if (QQNum != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(QQNum);
+      }
+      if (Password.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LoginQQRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ClientId.Length != 0) {
+        ClientId = other.ClientId;
+      }
+      if (other.QQNum != 0UL) {
+        QQNum = other.QQNum;
+      }
+      if (other.Password.Length != 0) {
+        Password = other.Password;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ClientId = input.ReadString();
+            break;
+          }
+          case 16: {
+            QQNum = input.ReadUInt64();
+            break;
+          }
+          case 26: {
+            Password = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class LoginQQReply : pb::IMessage<LoginQQReply> {
+    private static readonly pb::MessageParser<LoginQQReply> _parser = new pb::MessageParser<LoginQQReply>(() => new LoginQQReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LoginQQReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Chatbothub.ChatbothubReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginQQReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginQQReply(LoginQQReply other) : this() {
+      msg_ = other.msg_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LoginQQReply Clone() {
+      return new LoginQQReply(this);
+    }
+
+    /// <summary>Field number for the "msg" field.</summary>
+    public const int MsgFieldNumber = 1;
+    private string msg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Msg {
+      get { return msg_; }
+      set {
+        msg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LoginQQReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LoginQQReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Msg != other.Msg) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Msg.Length != 0) hash ^= Msg.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Msg.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Msg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Msg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Msg);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LoginQQReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Msg.Length != 0) {
+        Msg = other.Msg;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Msg = input.ReadString();
             break;
           }
         }

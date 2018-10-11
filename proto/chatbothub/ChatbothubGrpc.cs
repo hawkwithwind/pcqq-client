@@ -23,15 +23,16 @@
 using grpc = global::Grpc.Core;
 
 namespace Chatbothub {
-  /// <summary>
-  /// The greeting service definition.
-  /// </summary>
   public static partial class ChatBotHub
   {
     static readonly string __ServiceName = "chatbothub.ChatBotHub";
 
     static readonly grpc::Marshaller<global::Chatbothub.EventRequest> __Marshaller_chatbothub_EventRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Chatbothub.EventRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Chatbothub.EventReply> __Marshaller_chatbothub_EventReply = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Chatbothub.EventReply.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Chatbothub.BotsRequest> __Marshaller_chatbothub_BotsRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Chatbothub.BotsRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Chatbothub.BotsReply> __Marshaller_chatbothub_BotsReply = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Chatbothub.BotsReply.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Chatbothub.LoginQQRequest> __Marshaller_chatbothub_LoginQQRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Chatbothub.LoginQQRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Chatbothub.LoginQQReply> __Marshaller_chatbothub_LoginQQReply = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Chatbothub.LoginQQReply.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Chatbothub.EventRequest, global::Chatbothub.EventReply> __Method_EventTunnel = new grpc::Method<global::Chatbothub.EventRequest, global::Chatbothub.EventReply>(
         grpc::MethodType.DuplexStreaming,
@@ -39,6 +40,20 @@ namespace Chatbothub {
         "EventTunnel",
         __Marshaller_chatbothub_EventRequest,
         __Marshaller_chatbothub_EventReply);
+
+    static readonly grpc::Method<global::Chatbothub.BotsRequest, global::Chatbothub.BotsReply> __Method_GetBots = new grpc::Method<global::Chatbothub.BotsRequest, global::Chatbothub.BotsReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetBots",
+        __Marshaller_chatbothub_BotsRequest,
+        __Marshaller_chatbothub_BotsReply);
+
+    static readonly grpc::Method<global::Chatbothub.LoginQQRequest, global::Chatbothub.LoginQQReply> __Method_LoginQQ = new grpc::Method<global::Chatbothub.LoginQQRequest, global::Chatbothub.LoginQQReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "LoginQQ",
+        __Marshaller_chatbothub_LoginQQRequest,
+        __Marshaller_chatbothub_LoginQQReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -49,14 +64,17 @@ namespace Chatbothub {
     /// <summary>Base class for server-side implementations of ChatBotHub</summary>
     public abstract partial class ChatBotHubBase
     {
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="requestStream">Used for reading requests from the client.</param>
-      /// <param name="responseStream">Used for sending responses back to the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>A task indicating completion of the handler.</returns>
       public virtual global::System.Threading.Tasks.Task EventTunnel(grpc::IAsyncStreamReader<global::Chatbothub.EventRequest> requestStream, grpc::IServerStreamWriter<global::Chatbothub.EventReply> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Chatbothub.BotsReply> GetBots(global::Chatbothub.BotsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Chatbothub.LoginQQReply> LoginQQ(global::Chatbothub.LoginQQRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -86,25 +104,45 @@ namespace Chatbothub {
       {
       }
 
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
       public virtual grpc::AsyncDuplexStreamingCall<global::Chatbothub.EventRequest, global::Chatbothub.EventReply> EventTunnel(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return EventTunnel(new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
       public virtual grpc::AsyncDuplexStreamingCall<global::Chatbothub.EventRequest, global::Chatbothub.EventReply> EventTunnel(grpc::CallOptions options)
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_EventTunnel, null, options);
+      }
+      public virtual global::Chatbothub.BotsReply GetBots(global::Chatbothub.BotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBots(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Chatbothub.BotsReply GetBots(global::Chatbothub.BotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetBots, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Chatbothub.BotsReply> GetBotsAsync(global::Chatbothub.BotsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetBotsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Chatbothub.BotsReply> GetBotsAsync(global::Chatbothub.BotsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetBots, null, options, request);
+      }
+      public virtual global::Chatbothub.LoginQQReply LoginQQ(global::Chatbothub.LoginQQRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LoginQQ(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Chatbothub.LoginQQReply LoginQQ(global::Chatbothub.LoginQQRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_LoginQQ, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Chatbothub.LoginQQReply> LoginQQAsync(global::Chatbothub.LoginQQRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return LoginQQAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Chatbothub.LoginQQReply> LoginQQAsync(global::Chatbothub.LoginQQRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_LoginQQ, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override ChatBotHubClient NewInstance(ClientBaseConfiguration configuration)
@@ -118,7 +156,9 @@ namespace Chatbothub {
     public static grpc::ServerServiceDefinition BindService(ChatBotHubBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_EventTunnel, serviceImpl.EventTunnel).Build();
+          .AddMethod(__Method_EventTunnel, serviceImpl.EventTunnel)
+          .AddMethod(__Method_GetBots, serviceImpl.GetBots)
+          .AddMethod(__Method_LoginQQ, serviceImpl.LoginQQ).Build();
     }
 
   }
