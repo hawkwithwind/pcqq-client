@@ -30,7 +30,8 @@ RUN cd /usr/lib/cli && \
     mono /usr/lib/nuget/nuget.exe install Google.Protobuf && \
     mono /usr/lib/nuget/nuget.exe install Google.Protobuf.Tools && \
     mono /usr/lib/nuget/nuget.exe install Grpc && \
-    mono /usr/lib/nuget/nuget.exe install Grpc.Tools
+    mono /usr/lib/nuget/nuget.exe install Grpc.Tools && \
+    mono /usr/lib/nuget/nuget.exe install System.ValueTuple
     
 COPY . /home/myapp
 WORKDIR /home/myapp

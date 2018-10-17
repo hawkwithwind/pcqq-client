@@ -2,6 +2,8 @@
 using QQ.Framework.Utils;
 using QQ.Framework.Domains;
 using QQ.Framework;
+using System;
+using System.Linq;
 
 namespace QQGRPCRobot.Robots
 {
@@ -24,7 +26,7 @@ namespace QQGRPCRobot.Robots
             {
                 _socketService.Send(packet);
             }
-            _user.FriendMessages.Add(message);//添加到消息列表
+            _user.FriendSendMessages.Add(message); //添加到消息列表
         }
 
         public void SendToGroup(long groupNumber, Richtext content)
@@ -35,7 +37,7 @@ namespace QQGRPCRobot.Robots
             {
                 _socketService.Send(packet);
             }
-            _user.GroupMessages.Add(message);//添加到消息列表
+            _user.GroupSendMessages.Add(message);//添加到消息列表
         }
     }
 }

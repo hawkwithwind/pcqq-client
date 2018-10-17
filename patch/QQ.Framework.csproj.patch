@@ -1,12 +1,12 @@
---- QQ.Framework.csproj	2018-10-01 11:40:49.086617627 +0800
-+++ QQ.Framework.csproj.1	2018-10-01 11:49:45.497944143 +0800
+--- QQ.Framework.csproj	2018-10-17 10:10:04.205795111 +0800
++++ QQ.Framework.csproj.1	2018-10-17 10:11:54.290778123 +0800
 @@ -1,4 +1,4 @@
 -﻿<?xml version="1.0" encoding="utf-8"?>
 +<?xml version="1.0" encoding="utf-8"?>
  <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
    <PropertyGroup>
-@@ -38,6 +38,12 @@
+@@ -38,6 +38,15 @@
      <Reference Include="System" />
      <Reference Include="System.Drawing" />
      <Reference Include="System.Net.Http" />
@@ -15,11 +15,14 @@
 +    </Reference>
 +    <Reference Include="Ionic.Zlib">
 +      <HintPath>/usr/lib/mono/msbuild/15.0/bin/Sdks/Xamarin.IoT.Sdk/build/Ionic.Zip.dll</HintPath>
-+    </Reference>      
++    </Reference>
++    <Reference Include="System.ValueTuple">
++      <HintPath>/usr/lib/cli/System.ValueTuple.4.5.0/lib/net461/System.ValueTuple.dll</HintPath>
++    </Reference>
    </ItemGroup>
    <ItemGroup>
      <Compile Include="Domains\Commands\PacketCommand.cs" />
-@@ -246,4 +252,4 @@
+@@ -256,4 +265,4 @@
      </PackageReference>
    </ItemGroup>
    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
