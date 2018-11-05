@@ -6,5 +6,8 @@ namespace QQGRPCRobot.Domains
     {
 	[JsonProperty("grpcServer")]
 	public GRPCServer GrpcServer { get; set; }
+
+	[JsonProperty("clientId")]
+	public string ClientId { get; set; }
     }
 }

@@ -81,13 +81,11 @@ namespace QQGRPCRobot.Robots
             _point = new IPEndPoint(IPAddress.Parse(_host), _port);
         }
 
-        public void MessageLog(string content)
-        {
-            Console.WriteLine($"{DateTime.Now.ToString()}--{content}");
-
-	    string gender = _user.Gender == 0 ? "男" : "女";
-	    	    
-	    if(content=="登陆成功获取个人基本信息") {
+	public void LoginCallback(bool isSuccess, string message) {
+	    if(isSuccess) {
+		MessageLog($"登录成功: {message}");
+		
+		string gender = _user.Gender == 0 ? "男" : "女";		
 		this._botclient.SendEvent(new EventRequest() {
 			EventType = "LOGINDONE",
 			Body=JsonConvert.SerializeObject(new LoginInfo() {
@@ -99,7 +97,20 @@ namespace QQGRPCRobot.Robots
 			ClientId=this._botclient.clientId,
 			ClientType=this._botclient.clientType
 		    }).Wait();
+	    } else {
+		MessageLog($"登录失败: {message}");
+		this._botclient.SendEvent(new EventRequest() {
+			EventType = "LOGINFAILED",
+			Body="",
+			ClientId=this._botclient.clientId,
+			ClientType=this._botclient.clientType
+		    }).Wait();
 	    }
+	}
+
+        public void MessageLog(string content)
+        {
+            Console.WriteLine($"{DateTime.Now.ToString()}--{content}");
         }
 
         public void Login()
@@ -110,7 +121,7 @@ namespace QQGRPCRobot.Robots
 
         public void ReceiveVerifyCode(byte[] data)
         {
-            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "yanzhengma");
+            var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "/tmp/yanzhengma");
             var img = ImageHelper.CreateImageFromBytes(path, data);
             Console.Write($"请输入验证码({img}):");
             var code = Console.ReadLine();

@@ -33,9 +33,9 @@ namespace QQGRPCRobot
 	    Console.WriteLine(String.Format($"{DateTime.Now.ToString()}--{str}", args));
 	}
 	    
-	public QQBotClient(ChatBotHub.ChatBotHubClient client)
+	public QQBotClient(ChatBotHub.ChatBotHubClient client, string clientId)
 	{
-	    this.clientId = Guid.NewGuid().ToString();
+	    this.clientId = clientId;
 	    this.clientType = "QQBOT";
 	    this._client = client;
 	}
@@ -107,7 +107,6 @@ namespace QQGRPCRobot
 	    catch (RpcException e)
 	    {
 		Log("RPC failed", e);
-		throw;
 	    }
 	}
     }
