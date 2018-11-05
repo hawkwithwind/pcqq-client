@@ -70,7 +70,10 @@ namespace QQGRPCRobot
 			    while (await tunnel.ResponseStream.MoveNext(CancellationToken.None))
 			    {
 				var response = tunnel.ResponseStream.Current;
-				Log($"GOT MESSAGE {response.EventType} {response.Body}");
+				
+				if(response.EventType != "PONG") {
+				    Log($"GOT MESSAGE {response.EventType} {response.Body}");
+				}
 
 				if(response.EventType == "LOGIN") {				    
 				    QQLoginInfo qqinfo = JsonConvert.DeserializeObject<QQLoginInfo>(response.Body);
